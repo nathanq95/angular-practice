@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 /*
-  this app component is the highest level component.
-  similar to the app component in react, where it contains all the child components
+  This app component is the highest level component.
+  Similar to the app component in react, where it contains all the child components to be rendered
 */
 @Component({
   selector: 'app-root',
@@ -11,10 +11,19 @@ import { Component } from '@angular/core';
 export class AppComponent {
 
   constructor() {
-    this.name = 'yeeet';
+    this.childName = 'child';
+    this.outputedName = '';
   }
 
-  name: string;
+  /*
+    'addItem' is a method that takes a string and sets the 'outputedName' property equal to that string
+  */
+  addItem(newItem: string) {
+    this.outputedName = `${newItem}!`;
+  }
+
+  outputedName: string;
+  childName: string;
   title = 'intro';
 
   

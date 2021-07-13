@@ -1,0 +1,12 @@
+   <div style="align-content: center;">
+        <label for="item-input">Enter your name:</label>
+
+        <!-- '#newItem' is the variable that will store what the user types in. -->
+        <input type="text" id="item-input" #newItem>
+
+        <!-- 
+            'click' is an event that is bound to the 'addNewItem' method.
+            'addNewItem' takes in the value of 'newItem' as its argument.
+        -->
+        <button (click)="addNewItem(newItem.value)">Submit</button>  
+    </div>
